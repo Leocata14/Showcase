@@ -7,29 +7,44 @@
 //
 
 import UIKit
+import Firebase
 
 class UserSettingsViewController: UIViewController {
+    
+    
+    @IBOutlet weak var usernameText: MaterialTextField!
+    @IBOutlet weak var saveUsernameBtn: MaterialButton!
+    
+    var usernameRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("username")
+    
+    
+    //var currentUser = DataService.ds.REF_USER_CURRENT as? String
+    
+    var currentUser = DataService.ds.REF_USER_CURRENT
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func saveUserBtnTapped(sender: AnyObject) {
+        if usernameText.text != nil {
+            usernameRef.setValue(usernameText.text)
+        }
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
 
 }
