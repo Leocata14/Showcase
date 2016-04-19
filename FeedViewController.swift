@@ -19,7 +19,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var postField: MaterialTextField!
     @IBOutlet weak var imageSelectorImage: UIImageView!
-    @IBOutlet weak var ext: MaterialView!
     
     var posts = [Post]()
     var imageSelected = false
@@ -39,8 +38,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.shyNavBarManager.scrollView = self.tableView
-        self.shyNavBarManager.extensionView = ext
+//        self.shyNavBarManager.scrollView = self.tableView
+//        self.shyNavBarManager.extensionView = ext
         
         tableView.estimatedRowHeight = 347
         imgPicker = UIImagePickerController()
@@ -170,12 +169,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func postToFirebase(imgUrl: String?) {
-        
+        let userId = DataService.ds.REF_USER_CURRENT.key
         
         var post: Dictionary<String,AnyObject> = [
             "description": postField.text!,
             "likes": 0,
-            "user": "\(DataService.ds.REF_USER_CURRENT.key)"
+            "user": "\(userId)"
             
         ]
         
@@ -188,6 +187,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let postKey = firebasePost.key
         userPostRef.childByAppendingPath("\(postKey)").setValue(true)
+        
+        
 
         postField.text = ""
         imageSelectorImage.image = UIImage(named: "camera")
@@ -195,6 +196,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.reloadData()
     }
+    
+//    func findUsername(userId: String?) {
+//        let username = DataService.ds.REF_USERS.valueForKey(userId!)!.valueForKey("username")
+//        print("USERNAME: \(username)")
+//    }
     
 
 }

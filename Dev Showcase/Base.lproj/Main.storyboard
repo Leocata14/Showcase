@@ -208,7 +208,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfu-hU-6Qs" customClass="MaterialView" customModule="Dev_Showcase" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfu-hU-6Qs" customClass="MaterialView" customModule="Dev_Showcase" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="64"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ykv-Zb-bic">
@@ -391,27 +391,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-sU-auP" customClass="MaterialView" customModule="Dev_Showcase" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="605" height="75"/>
-                                <color key="backgroundColor" red="0.90196078430000004" green="0.12941176469999999" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="7WO-h3-TVd"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90588235294117647" green="0.90588235294117647" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="d1e-sU-auP" secondAttribute="trailing" id="3kG-i2-PwZ"/>
-                            <constraint firstItem="d1e-sU-auP" firstAttribute="centerX" secondItem="JyQ-9e-ouL" secondAttribute="centerX" id="4oH-cD-iyA"/>
                             <constraint firstItem="kvB-ZI-gCx" firstAttribute="top" secondItem="Zfu-hU-6Qs" secondAttribute="bottom" constant="8" id="5az-fR-ojV"/>
-                            <constraint firstItem="d1e-sU-auP" firstAttribute="top" secondItem="LAG-bq-b9i" secondAttribute="bottom" id="7kq-Pn-8G2"/>
                             <constraint firstItem="Zfu-hU-6Qs" firstAttribute="top" secondItem="LAG-bq-b9i" secondAttribute="bottom" id="B2c-oX-mTK"/>
-                            <constraint firstItem="d1e-sU-auP" firstAttribute="leading" secondItem="JyQ-9e-ouL" secondAttribute="leading" id="DWG-HJ-Adn"/>
                             <constraint firstItem="kvB-ZI-gCx" firstAttribute="leading" secondItem="JyQ-9e-ouL" secondAttribute="leadingMargin" id="E0k-15-tKa"/>
                             <constraint firstItem="Zfu-hU-6Qs" firstAttribute="leading" secondItem="JyQ-9e-ouL" secondAttribute="leading" id="TyS-zJ-58b"/>
                             <constraint firstItem="Zfu-hU-6Qs" firstAttribute="trailing" secondItem="JyQ-9e-ouL" secondAttribute="trailingMargin" id="YDz-y3-uGd"/>
                             <constraint firstItem="Zfu-hU-6Qs" firstAttribute="leading" secondItem="JyQ-9e-ouL" secondAttribute="leadingMargin" id="YNP-i8-oBG"/>
-                            <constraint firstItem="d1e-sU-auP" firstAttribute="top" secondItem="LAG-bq-b9i" secondAttribute="bottom" id="g5V-iz-xvL"/>
                             <constraint firstAttribute="trailing" secondItem="Zfu-hU-6Qs" secondAttribute="trailing" id="gcv-xc-saB"/>
                             <constraint firstItem="kvB-ZI-gCx" firstAttribute="top" secondItem="LAG-bq-b9i" secondAttribute="bottom" id="hqX-tB-kFz"/>
                             <constraint firstItem="kvB-ZI-gCx" firstAttribute="trailing" secondItem="JyQ-9e-ouL" secondAttribute="trailingMargin" id="o9r-1R-KWW"/>
@@ -422,11 +410,6 @@
                             <mask key="constraints">
                                 <exclude reference="YDz-y3-uGd"/>
                                 <exclude reference="YNP-i8-oBG"/>
-                                <exclude reference="3kG-i2-PwZ"/>
-                                <exclude reference="4oH-cD-iyA"/>
-                                <exclude reference="7kq-Pn-8G2"/>
-                                <exclude reference="DWG-HJ-Adn"/>
-                                <exclude reference="g5V-iz-xvL"/>
                                 <exclude reference="hqX-tB-kFz"/>
                                 <exclude reference="sIN-Vm-vgQ"/>
                             </mask>
@@ -441,7 +424,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ext" destination="Zfu-hU-6Qs" id="LTM-wC-lBb"/>
                         <outlet property="imageSelectorImage" destination="8UA-1F-fOC" id="dVD-5E-y56"/>
                         <outlet property="postField" destination="zoN-Uq-5V5" id="PIv-tX-OdB"/>
                         <outlet property="tableView" destination="kvB-ZI-gCx" id="pEa-B7-TN9"/>

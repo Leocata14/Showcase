@@ -22,7 +22,8 @@ class PostCell: UITableViewCell {
     var post: Post!
     var request: Request?
     var likeRef: Firebase!
-    var userRef: String!
+    var usernameRef: Firebase!
+    var username: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -53,16 +54,16 @@ class PostCell: UITableViewCell {
         
         
         likeRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("likes").childByAppendingPath(post.postKey)
-        userRef = post.userKey!
         
-        //let temp = DataService.ds.REF_POSTS.childByAppendingPath("user").childByAppendingPath(post.userKey).key
-        //let temp = DataService.ds.REF_USERS.childByAppendingPath("users").childByAppendingPath("posts").valueForKey("\()")
-        //print("TEMP: \(temp)")
-        //print("user: \(userRef)")
+        usernameRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("username")
+        usernameRef.observeEventType(.Value, withBlock: { snapshot in
+                self.usernameLabel.text = snapshot.value as? String
+            })
+        
         
         self.descriptionText.text = post.postDescription
         self.likesLabel.text = "\(post.likes)"
-            self.usernameLabel.text = post.userKey
+        
         
 
     
