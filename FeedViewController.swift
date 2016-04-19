@@ -39,6 +39,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
         
+        //let ext = UIView(frame: CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 40))
+        
         self.shyNavBarManager.scrollView = self.tableView
         self.shyNavBarManager.extensionView = ext
         
