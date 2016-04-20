@@ -27,7 +27,7 @@ class PostCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let tap = UITapGestureRecognizer(target: self, action: "likeTapped:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(PostCell.likeTapped(_:)))
         tap.numberOfTapsRequired = 1
         likeImage.addGestureRecognizer(tap)
         likeImage.userInteractionEnabled = true
@@ -62,7 +62,7 @@ class PostCell: UITableViewCell {
         
         self.descriptionText.text = post.postDescription
         self.likesLabel.text = "\(post.likes)"
-            self.usernameLabel.text = post.userKey
+            self.usernameLabel.text = post.username
         
 
     

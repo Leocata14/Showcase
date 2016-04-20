@@ -19,12 +19,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var postField: MaterialTextField!
     @IBOutlet weak var imageSelectorImage: UIImageView!
-    @IBOutlet weak var ext: MaterialView!
     
     var posts = [Post]()
     var imageSelected = false
     static var imageCache = NSCache()
     var userPostRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("posts")
+    
+    var username: String!
     
     var imgPicker: UIImagePickerController!
 
@@ -38,9 +39,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        self.shyNavBarManager.scrollView = self.tableView
-        self.shyNavBarManager.extensionView = ext
         
         tableView.estimatedRowHeight = 347
         imgPicker = UIImagePickerController()
@@ -175,7 +173,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         var post: Dictionary<String,AnyObject> = [
             "description": postField.text!,
             "likes": 0,
-            "user": "\(DataService.ds.REF_USER_CURRENT.key)"
+            "user": "\(DataService.ds.REF_USER_CURRENT.key)",
+            "username": "\(self.username)"
             
         ]
         
@@ -188,6 +187,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let postKey = firebasePost.key
         userPostRef.childByAppendingPath("\(postKey)").setValue(true)
+        
+        let usernameRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("username")
+        
+        usernameRef.observeEventType(.Value, withBlock: { snapshot in
+            //self.username = "\(snapshot.value)"
+            print(snapshot.value)
+            let firsebasePostUsername = firebasePost.childByAppendingPath("username")
+            firsebasePostUsername.setValue(snapshot.value)
+        })
+        
+        
+        
 
         postField.text = ""
         imageSelectorImage.image = UIImage(named: "camera")
