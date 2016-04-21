@@ -11,7 +11,6 @@
 		BF7242691CBBB7B600957F38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7242681CBBB7B600957F38 /* AppDelegate.swift */; };
 		BF72426B1CBBB7B600957F38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72426A1CBBB7B600957F38 /* ViewController.swift */; };
 		BF72426E1CBBB7B600957F38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF72426C1CBBB7B600957F38 /* Main.storyboard */; };
-		BF7242701CBBB7B600957F38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF72426F1CBBB7B600957F38 /* Assets.xcassets */; };
 		BF7242731CBBB7B600957F38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7242711CBBB7B600957F38 /* LaunchScreen.storyboard */; };
 		BF7242821CBBB80300957F38 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF72427E1CBBB80300957F38 /* NotoSans-Bold.ttf */; };
 		BF7242831CBBB80300957F38 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF72427F1CBBB80300957F38 /* NotoSans-BoldItalic.ttf */; };
@@ -29,6 +28,7 @@
 		BF72429C1CBD179C00957F38 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72429B1CBD179C00957F38 /* PostCell.swift */; };
 		BF72429E1CBD285100957F38 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72429D1CBD285100957F38 /* Post.swift */; };
 		BFED33D81CC895DA007EE2A3 /* ProfileSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED33D71CC895DA007EE2A3 /* ProfileSetupViewController.swift */; };
+		BFED33DA1CC8FE33007EE2A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFED33D91CC8FE33007EE2A3 /* Assets.xcassets */; };
 		CA4B8BC8C1F86E0765152D8E /* Pods_Dev_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE51EF5A3FE55309CD781E /* Pods_Dev_Showcase.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,6 @@
 		BF7242681CBBB7B600957F38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF72426A1CBBB7B600957F38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "Dev Showcase/ViewController.swift"; sourceTree = "<group>"; };
 		BF72426D1CBBB7B600957F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BF72426F1CBBB7B600957F38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7242721CBBB7B600957F38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7242741CBBB7B600957F38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF72427E1CBBB80300957F38 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		BF72429B1CBD179C00957F38 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		BF72429D1CBD285100957F38 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BFED33D71CC895DA007EE2A3 /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
+		BFED33D91CC8FE33007EE2A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC15645C1070CF027E83CA88 /* Pods-Dev Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev Showcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dev Showcase/Pods-Dev Showcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +115,7 @@
 			children = (
 				BF7242681CBBB7B600957F38 /* AppDelegate.swift */,
 				BF72426C1CBBB7B600957F38 /* Main.storyboard */,
-				BF72426F1CBBB7B600957F38 /* Assets.xcassets */,
+				BFED33D91CC8FE33007EE2A3 /* Assets.xcassets */,
 				BF7242711CBBB7B600957F38 /* LaunchScreen.storyboard */,
 				BF7242741CBBB7B600957F38 /* Info.plist */,
 			);
@@ -256,7 +256,7 @@
 				BF7242731CBBB7B600957F38 /* LaunchScreen.storyboard in Resources */,
 				BF7242831CBBB80300957F38 /* NotoSans-BoldItalic.ttf in Resources */,
 				BF7242841CBBB80300957F38 /* NotoSans-Italic.ttf in Resources */,
-				BF7242701CBBB7B600957F38 /* Assets.xcassets in Resources */,
+				BFED33DA1CC8FE33007EE2A3 /* Assets.xcassets in Resources */,
 				BF72426E1CBBB7B600957F38 /* Main.storyboard in Resources */,
 				BF7242851CBBB80300957F38 /* NotoSans-Regular.ttf in Resources */,
 			);

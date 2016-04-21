@@ -192,6 +192,7 @@
                         <outlet property="emailField" destination="Hof-Xp-NXP" id="uUV-Nf-ogK"/>
                         <outlet property="passwordField" destination="sLZ-WT-Wf8" id="XUl-ag-Egd"/>
                         <segue destination="tR6-VG-P7r" kind="presentation" identifier="loggedIn" id="0iV-yu-X0I"/>
+                        <segue destination="MoX-iX-SEq" kind="presentation" identifier="feed" id="g3a-of-Q0a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -201,7 +202,6 @@
         <!--Profile Setup View Controller-->
         <scene sceneID="KxV-hU-Ji3">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5mS-rh-ZWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tR6-VG-P7r" customClass="ProfileSetupViewController" customModule="Dev_Showcase" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j9T-ij-mXi"/>
@@ -298,6 +298,7 @@
                         <segue destination="MoX-iX-SEq" kind="presentation" identifier="feed" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="taK-u1-EHD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mS-rh-ZWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="m2k-H5-t4q">
                     <connections>
                         <action selector="profileImgSelectorTapped:" destination="tR6-VG-P7r" id="71U-Lt-row"/>
@@ -379,11 +380,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="347"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-eb-wfe" userLabel="Container" customClass="MaterialView" customModule="Dev_Showcase" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qgj-eb-wfe" userLabel="Container" customClass="MaterialView" customModule="Dev_Showcase" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="246" height="331"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-Mf-Sky">
-                                                            <rect key="frame" x="8" y="8" width="300" height="315"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-Mf-Sky">
+                                                            <rect key="frame" x="8" y="8" width="230" height="315"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J53-mu-sVZ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="230" height="50"/>
@@ -453,8 +454,8 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </stackView>
-                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-Tf-wsE">
-                                                                    <rect key="frame" x="0.0" y="60" width="300" height="75"/>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PrL-Tf-wsE">
+                                                                    <rect key="frame" x="0.0" y="60" width="230" height="75"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="Sj2-C3-5ZD"/>
                                                                     </constraints>
@@ -464,8 +465,8 @@
                                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                                     <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                                 </textView>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-Vy-UlW">
-                                                                    <rect key="frame" x="0.0" y="145" width="300" height="170"/>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-Vy-UlW">
+                                                                    <rect key="frame" x="0.0" y="145" width="230" height="170"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <constraints>
@@ -557,7 +558,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="LgS-Fa-Y66">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="g3f-xP-SgQ">
+                        <barButtonItem key="rightBarButtonItem" image="Gear" id="g3f-xP-SgQ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="AkV-eg-R5k" kind="show" id="5yY-G3-Yep"/>
@@ -634,6 +635,13 @@
                             <constraint firstItem="78d-lj-ym4" firstAttribute="centerX" secondItem="jVA-Tt-yMi" secondAttribute="centerX" id="yzB-ky-sv0"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="30V-Xc-zTn">
+                        <barButtonItem key="rightBarButtonItem" image="Unlock" id="PkU-kx-fgB">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="saveUsernameBtn" destination="fjJ-z6-rky" id="RvV-Uc-ZJr"/>
                         <outlet property="usernameText" destination="78d-lj-ym4" id="UT3-r4-sKk"/>
@@ -664,6 +672,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Gear" width="36" height="36"/>
+        <image name="Unlock" width="36" height="36"/>
         <image name="avatar" width="186" height="186"/>
         <image name="camera" width="50" height="50"/>
         <image name="code-icon-logo" width="318" height="281"/>
@@ -672,4 +682,7 @@
         <image name="profile" width="100" height="104"/>
         <image name="screen" width="300" height="534"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="g3a-of-Q0a"/>
+    </inferredMetricsTieBreakers>
 </document>

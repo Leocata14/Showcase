@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
-            self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+            self.performSegueWithIdentifier(SEGUE_GO_TO_FEED, sender: nil)
         }
     }
     
@@ -51,7 +51,9 @@ class ViewController: UIViewController {
                         
                         
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
-                        self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                        
+                        
+                        
                     }
                     
                 })
@@ -86,17 +88,18 @@ class ViewController: UIViewController {
                                 DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { (err, authData) in
                                     let user = ["provider": authData.provider!]
                                     DataService.ds.createFirebaseUsers(authData.uid, user: user)
+                                    
                                 })
-                                
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                                
                             }
                             
                         })
                     } else {
-                        self.showErrorAlert("Login Failed", msg: "Please check your username or passowrd")
+                        self.showErrorAlert("Login Failed", msg: "Please check your username or password")
                     }
                 } else {
-                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                    
                 }
                 
             })

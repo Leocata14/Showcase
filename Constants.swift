@@ -19,3 +19,5 @@ let SEGUE_GO_TO_FEED = "feed"
 
 //Status Codes
 let STATUS_ACCOUNT_NONEXIST = -8
+
+
