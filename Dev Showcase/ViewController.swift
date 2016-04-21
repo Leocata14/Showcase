@@ -84,7 +84,7 @@ class ViewController: UIViewController {
                                
                                 
                                 DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { (err, authData) in
-                                    let user = ["provider": authData.provider!, "blah":"email"]
+                                    let user = ["provider": authData.provider!]
                                     DataService.ds.createFirebaseUsers(authData.uid, user: user)
                                 })
                                 

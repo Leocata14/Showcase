@@ -12,8 +12,10 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
@@ -189,12 +191,120 @@
                     <connections>
                         <outlet property="emailField" destination="Hof-Xp-NXP" id="uUV-Nf-ogK"/>
                         <outlet property="passwordField" destination="sLZ-WT-Wf8" id="XUl-ag-Egd"/>
-                        <segue destination="MoX-iX-SEq" kind="show" identifier="loggedIn" id="Vg9-un-hWn"/>
+                        <segue destination="tR6-VG-P7r" kind="presentation" identifier="loggedIn" id="0iV-yu-X0I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="456"/>
+            <point key="canvasLocation" x="348" y="451"/>
+        </scene>
+        <!--Profile Setup View Controller-->
+        <scene sceneID="KxV-hU-Ji3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mS-rh-ZWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="tR6-VG-P7r" customClass="ProfileSetupViewController" customModule="Dev_Showcase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="j9T-ij-mXi"/>
+                        <viewControllerLayoutGuide type="bottom" id="5NU-bt-Dh3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NnB-27-HRq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0br-Np-CCm">
+                                <rect key="frame" x="185" y="70" width="231" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Showcase!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBp-LU-Tgt">
+                                        <rect key="frame" x="0.0" y="0.0" width="231" height="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's set up your profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65J-T9-wWv">
+                                        <rect key="frame" x="30" y="26" width="172" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="6QK-Sy-72j">
+                                <rect key="frame" x="210" y="167" width="180" height="180"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="HTq-5a-Tvg"/>
+                                    <constraint firstAttribute="height" constant="180" id="ZQP-hL-Jar"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="m2k-H5-t4q" appends="YES" id="Sfd-ae-7nU"/>
+                                </connections>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IG8-bQ-kaz">
+                                <rect key="frame" x="150" y="397" width="300" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfU-19-YyI" customClass="MaterialTextField" customModule="Dev_Showcase" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="36"/>
+                                        <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="479" id="dUh-Dq-wFq"/>
+                                            <constraint firstAttribute="width" constant="300" id="dn8-Mb-Vil"/>
+                                            <constraint firstAttribute="height" constant="36" id="xEL-NP-dBK"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dUh-Dq-wFq"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucC-q3-XgR" customClass="MaterialButton" customModule="Dev_Showcase" customModuleProvider="target">
+                                        <rect key="frame" x="128" y="46" width="45" height="29"/>
+                                        <color key="backgroundColor" red="0.0" green="0.70588235290000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="af4-iB-Khg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="12"/>
+                                        <state key="normal" title="SAVE">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="makePost:" destination="JsG-hx-K3j" eventType="touchUpInside" id="zkI-6x-Uqw"/>
+                                            <action selector="saveBtnTapped:" destination="tR6-VG-P7r" eventType="touchUpInside" id="y0O-VN-LVy"/>
+                                            <action selector="saveUserBtnTapped:" destination="AkV-eg-R5k" eventType="touchUpInside" id="bCf-lI-uxV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="qR1-gc-7k4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96875160932540894" green="0.5287054181098938" blue="0.057641945779323578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6QK-Sy-72j" firstAttribute="top" secondItem="0br-Np-CCm" secondAttribute="bottom" constant="50" id="49z-mn-QwW"/>
+                            <constraint firstItem="0br-Np-CCm" firstAttribute="centerX" secondItem="NnB-27-HRq" secondAttribute="centerX" id="6CN-02-eD5"/>
+                            <constraint firstItem="6QK-Sy-72j" firstAttribute="centerX" secondItem="NnB-27-HRq" secondAttribute="centerX" id="840-qx-C7H"/>
+                            <constraint firstItem="IG8-bQ-kaz" firstAttribute="top" secondItem="6QK-Sy-72j" secondAttribute="bottom" constant="50" id="BP4-Cx-58W"/>
+                            <constraint firstItem="0br-Np-CCm" firstAttribute="top" secondItem="j9T-ij-mXi" secondAttribute="bottom" constant="50" id="GHE-eU-0Aa"/>
+                            <constraint firstItem="IG8-bQ-kaz" firstAttribute="centerX" secondItem="NnB-27-HRq" secondAttribute="centerX" id="Vtj-25-7gk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileImg" destination="6QK-Sy-72j" id="q4R-Xu-nQc"/>
+                        <outlet property="usernameTxtField" destination="zfU-19-YyI" id="3X4-uz-Ben"/>
+                        <segue destination="MoX-iX-SEq" kind="presentation" identifier="feed" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="taK-u1-EHD"/>
+                    </connections>
+                </viewController>
+                <tapGestureRecognizer id="m2k-H5-t4q">
+                    <connections>
+                        <action selector="profileImgSelectorTapped:" destination="tR6-VG-P7r" id="71U-Lt-row"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="387" y="1214"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="igR-Rb-ifM">
@@ -531,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDi-CA-dLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="456"/>
+            <point key="canvasLocation" x="1293" y="1334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zaE-yg-q1Z">
@@ -554,6 +664,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar" width="186" height="186"/>
         <image name="camera" width="50" height="50"/>
         <image name="code-icon-logo" width="318" height="281"/>
         <image name="fb-icon" width="65" height="65"/>

@@ -41,6 +41,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         tableView.estimatedRowHeight = 347
+        
         imgPicker = UIImagePickerController()
         imgPicker.delegate = self
         

@@ -17,9 +17,6 @@ class UserSettingsViewController: UIViewController {
     
     var usernameRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("username")
     
-    
-    //var currentUser = DataService.ds.REF_USER_CURRENT as? String
-    
     var currentUser = DataService.ds.REF_USER_CURRENT
     
     

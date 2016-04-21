@@ -28,6 +28,7 @@
 		BF72429A1CBD16F400957F38 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7242991CBD16F400957F38 /* FeedViewController.swift */; };
 		BF72429C1CBD179C00957F38 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72429B1CBD179C00957F38 /* PostCell.swift */; };
 		BF72429E1CBD285100957F38 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF72429D1CBD285100957F38 /* Post.swift */; };
+		BFED33D81CC895DA007EE2A3 /* ProfileSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFED33D71CC895DA007EE2A3 /* ProfileSetupViewController.swift */; };
 		CA4B8BC8C1F86E0765152D8E /* Pods_Dev_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BE51EF5A3FE55309CD781E /* Pods_Dev_Showcase.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		BF7242991CBD16F400957F38 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		BF72429B1CBD179C00957F38 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		BF72429D1CBD285100957F38 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BFED33D71CC895DA007EE2A3 /* ProfileSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSetupViewController.swift; sourceTree = "<group>"; };
 		EC15645C1070CF027E83CA88 /* Pods-Dev Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dev Showcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dev Showcase/Pods-Dev Showcase.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				BF72426A1CBBB7B600957F38 /* ViewController.swift */,
 				BF7242991CBD16F400957F38 /* FeedViewController.swift */,
 				BF16318E1CC319E900C8144C /* UserSettingsViewController.swift */,
+				BFED33D71CC895DA007EE2A3 /* ProfileSetupViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				BF7242981CBBCCD900957F38 /* DataService.swift in Sources */,
 				BF7242871CBBB9A900957F38 /* MaterialView.swift in Sources */,
 				BF72426B1CBBB7B600957F38 /* ViewController.swift in Sources */,
+				BFED33D81CC895DA007EE2A3 /* ProfileSetupViewController.swift in Sources */,
 				BF7242691CBBB7B600957F38 /* AppDelegate.swift in Sources */,
 				BF72429C1CBD179C00957F38 /* PostCell.swift in Sources */,
 				BF16318F1CC319E900C8144C /* UserSettingsViewController.swift in Sources */,
